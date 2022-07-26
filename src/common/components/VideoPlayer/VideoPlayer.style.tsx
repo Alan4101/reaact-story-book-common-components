@@ -1,5 +1,5 @@
-import { Theme, Slider } from "@mui/material";
-import { makeStyles, withStyles } from "@mui/styles";
+import { Theme, Slider, SliderProps } from "@mui/material";
+import { makeStyles, styled, withStyles } from "@mui/styles";
 
 export const usePlayerControlStyles = makeStyles((theme: Theme) => ({
   videoContainer: {
@@ -55,30 +55,57 @@ export const usePlayerControlStyles = makeStyles((theme: Theme) => ({
   },
 }));
 
-export const PrettoSlider = withStyles({
-  root: {
+export const StyledSlider = styled(Slider)<SliderProps>(({ theme: Theme }) => ({
+  "& .MuiSlider-root": {
     height: 7,
     padding: 0,
   },
-  thumb: {
+  "& .MuiSlider-thumb": {
     height: 0,
     width: 20,
     "&:focus, &:hover, &$active": {
       boxShadow: "inherit",
     },
   },
-  active: {},
-  valueLabel: {
+  "& .MuiSlider-valueLabel": {
     left: "calc(-50% + 4px)",
   },
-  track: {
+  "& .MuiSlider-track": {
     height: 8,
     borderRadius: 4,
     backgroundColor: "#fff",
   },
-  rail: {
+  "& .MuiSlider-rail": {
     height: 8,
     borderRadius: 4,
     backgroundColor: "rgba(255, 255, 255, 0.3)",
   },
-})(Slider);
+  "& 	.Mui-active": {},
+}));
+// export const PrettoSlider = withStyles({
+//   root: {
+//     height: 7,
+//     padding: 0,
+//   },
+//   thumb: {
+//     height: 0,
+//     width: 20,
+//     "&:focus, &:hover, &$active": {
+//       boxShadow: "inherit",
+//     },
+//   },
+//   active: {},
+//   valueLabel: {
+//     left: "calc(-50% + 4px)",
+//   },
+//   track: {
+//     height: 8,
+//     borderRadius: 4,
+//     backgroundColor: "#fff",
+//   },
+//   rail: {
+//     height: 8,
+//     borderRadius: 4,
+//     backgroundColor: "rgba(255, 255, 255, 0.3)",
+//   },
+// })(Slider);

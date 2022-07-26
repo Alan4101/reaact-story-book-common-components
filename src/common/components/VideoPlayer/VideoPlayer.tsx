@@ -8,7 +8,11 @@ import { VolumeIcon } from "../../assets/videoPlayerIcons/VolumeIcon";
 import { usePlayerControls } from "../../services/hooks/usePlayerControl";
 import { formatTime } from "./VideoPlayer.helper";
 
-import { PrettoSlider, usePlayerControlStyles } from "./VideoPlayer.style";
+import {
+  // PrettoSlider,
+  StyledSlider,
+  usePlayerControlStyles,
+} from "./VideoPlayer.style";
 
 interface PayerControlProps {
   videoUrl: string;
@@ -87,12 +91,12 @@ export const VideoPlayer: FC<PayerControlProps> = ({
             </Grid>
             <Grid item container xs={6} className={classes.flexContainer}>
               <Grid item xs={12}>
-                <PrettoSlider
+                <StyledSlider
                   min={0}
                   max={100}
                   value={playerState.timeProgress}
                   onChange={handleVideoProgress}
-                ></PrettoSlider>
+                ></StyledSlider>
               </Grid>
             </Grid>
             <Grid item container xs={3} className={classes.flexContainer}>

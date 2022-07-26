@@ -1,0 +1,29 @@
+.accordion-numbered{
+  box-shadow: none;
+}
+.accordion-numbered::before{
+  display: none;
+  
+}
+.number{
+  flex-shrink: 0 !important;
+  flex-basis: 30px;
+  margin-right: 14px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+  color: #000;
+  border: 1px solid;
+  border-color: #ccc;
+  border-radius: 50%;
+}
+.title {
+  font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    color: #000;
+    white-space: nowrap;
+}
